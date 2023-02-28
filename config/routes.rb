@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  # The `new` route needs to be placed before the `show` route
+  get "tasks", to: "tasks#index"
+  get "tasks/:id", to: "tasks#show"
 end
